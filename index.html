@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Exemple menu déroulant accessible</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav aria-label="Navigation principale">
+    <ul class="menu" role="menubar">
+      <li role="none">
+        <a href="#" role="menuitem" tabindex="0">Accueil</a>
+      </li>
+
+      <li class="has-sub" role="none">
+        <button class="menu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-1">
+          Produits
+        </button>
+        <ul id="submenu-1" class="submenu" role="menu" aria-hidden="true">
+          <li role="none"><a role="menuitem" tabindex="-1" href="#">Produit A</a></li>
+          <li role="none"><a role="menuitem" tabindex="-1" href="#">Produit B</a></li>
+          <li role="none"><a role="menuitem" tabindex="-1" href="#">Produit C</a></li>
+        </ul>
+      </li>
+
+      <li class="has-sub" role="none">
+        <button class="menu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-2">
+          Services
+        </button>
+        <ul id="submenu-2" class="submenu" role="menu" aria-hidden="true">
+          <li role="none"><a role="menuitem" tabindex="-1" href="#">Service X</a></li>
+          <li role="none"><a role="menuitem" tabindex="-1" href="#">Service Y</a></li>
+        </ul>
+      </li>
+
+      <li role="none">
+        <a href="#" role="menuitem" tabindex="0">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
